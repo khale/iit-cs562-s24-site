@@ -1,0 +1,15 @@
+.task {
+  @extend %card;
+
+  h1, h2 {
+    @extend .text-gamma;
+  }
+
+  .task-meta {
+    @extend .text-epsilon;
+  }
+
+  border: 1px solid purple;
+  background-color: rgba(101, 0, 194, 0.24);
+  border-radius: 2px;
+}
