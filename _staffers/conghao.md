@@ -4,6 +4,6 @@ role: Teaching Assistant
 email: cliu115@hawk.iit.edu
 website: ""
 photo: 
-office-hours: TBD @ SB 115
+office-hours: Friday 2:30PM-5PM @ SB 115
 ---
 
