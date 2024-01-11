@@ -24,6 +24,10 @@ schedule:
   - name: Monday
   - name: Tuesday
     events:
+      - name: Office Hours (Liu)
+        start: 1:00 PM
+        end: 3:00 PM
+        location: SB 115
       - name: Lecture
         start: 3:15 PM
         end: 4:30 PM
