@@ -37,7 +37,7 @@ schedule:
       - name: Office Hours (Hale)
         start: 8:00 AM
         end: 9:30 AM
-        location: Zoom
+        location: Discord
   - name: Thursday
     events:
       - name: Lecture
