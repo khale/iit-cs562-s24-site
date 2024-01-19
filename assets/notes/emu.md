@@ -33,6 +33,7 @@ non-architected state: (we _typically_ dont have to worry about these!)
 
 
 
+```
 PHYSICAL MEMORY MAP
 
 |-----------------------| 0xffff
@@ -54,6 +55,7 @@ PHYSICAL MEMORY MAP
 |------------------------|
 |   NETWORK CARD         |
 |------------------------| 0x0000
+```
 
 ====================================
 
