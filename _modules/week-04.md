@@ -3,7 +3,7 @@ title: Week 4
 ---
 
 Day 6 (1/30)
-: [Binary Translation](#)
+: [Binary Translation (recorded lec. on Blackboard)](#)
   : **S&N 2.5-2.10**{: .label .label-purple}
 
 Day 7 (2/1)
