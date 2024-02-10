@@ -73,6 +73,19 @@ git clone https://github.com/khale/hawkbeans-skeleton.git
 
 This will fetch the code from a public git repo.
 
+Before you build the code, you'll need some packages. You can either use Vagrant
+with the provided `Vagrantfile` to run this in a VM, or you can install the packages
+manually on you own Linux VM. **Windows/Mac are not supported!** These are the packages you'll need
+(with Fedora package names):
+
+- `python3`
+- `python3-pip`
+- `readline-devel`
+- `java-1.8.0-openjdk`
+- `java-1.8.0-openjdk-devel`
+- `java-1.8.0-openjdk-javadoc`
+- `ant`
+
 ## Part 2: Building and Running Hawkbeans
 You can now build Hawkbeans using `make`. This builds the actual JVM. You will
 also want to build the Java standard libraries which Hawkbeans will use for
@@ -548,8 +561,7 @@ implementation of `iadd`, I would create a commit for that. Make sure your commi
 messages are sane and describe succinctly the nature of the additions.
 
 Once you've finished, you can can hand in your code using our scripts. Only one
-person from each group should submit a handin. Make sure you're either directly
-connected to the IIT network or you are using a VPN before running this:
+person from each group should submit a handin. 
 
 ```bash
 make handin
