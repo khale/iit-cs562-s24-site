@@ -152,7 +152,7 @@ etc.) will not work correctly until symbolic resolution is complete.
 ### Coding Task 1
 
 Your first task is to complete method and class resolution in Hawkbeans. This
-will involve filling in the implementations for two functions in `src/class.c`,
+will involve filling in the implementations for two functions in `jvm/class.c`,
 `hb_resolve_class` and `hb_resolve_method`. The latter relies on the former, so
 start with `hb_resolve_class`. You'll want to use the Oracle JVM docs for [class
 resolution](https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-5.html#jvms-5.4.3.1) and [method resolution](https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-5.html#jvms-5.4.3.3) as references when writing your
@@ -248,7 +248,7 @@ that because the JVM is a stack machine, you do not have to deal with
 registers, making interpretation somewhat easier.
 
 A significant portion of the bytecode interpreter is provided for you. You can
-find this implementation in `src/bc_interp.c`. Note that interpretation is only
+find this implementation in `jvm/bc_interp.c`. Note that interpretation is only
 done within the context of a method! That is, there is no way to execute
 bytecode in this JVM without invoking a Java method. This is a very important
 distinction from other types of virtual machines.
@@ -333,8 +333,8 @@ The interface to exceptions used by the rest of the JVM is defined in `include/e
   `include/exceptions.h`).
 
 Your task here is to implement `hb_throw_exception()` and
-`hb_throw_and_create_excp()` in `src/exceptions.c`, as well as the handler for
-the athrow instruction in `src/bc_interp.c`.
+`hb_throw_and_create_excp()` in `jvm/exceptions.c`, as well as the handler for
+the athrow instruction in `jvm/bc_interp.c`.
 
 I'm not going to give you too much instruction here, but the general principle
 is that you need to scan the exception table for the method corresponding to the
@@ -412,7 +412,7 @@ collected. The details are discussed below.
 
 ### Coding Task 4
 There is significantly more skeleton code for you to work with for this part.
-You should start by taking a look at `gc_init()` in `src/gc.c`. This is where the GC
+You should start by taking a look at `gc_init()` in `jvm/gc.c`. This is where the GC
 is initialized. The important bits here that you should look at are the calls
 to `add_root()` and `init_ref_tbl()`. Each call to `add_root()` is registering a root
 object which the GC shall scan during the mark phase. Each root is associated
@@ -511,7 +511,7 @@ at a finer granularity here. If you'd like to see general debugging prints, set
 `MODE=DEBUG` when invoking `make`. You can then set the remaining flags depending
 on which component of the JVM you'd like to debug. For example, if I'm working
 in my bytecode interpreter and I want to enable debugging there, I'd set
-`DEBUG_INTERP` to 1, then in my code in `src/bc_interp.c` I'd use the `BC_DEBUG()`
+`DEBUG_INTERP` to 1, then in my code in `jvm/bc_interp.c` I'd use the `BC_DEBUG()`
 print macro to add debugging printouts specific to that component. These prints
 will only appear when debugging is enabled. You can take a look at the `Makefile`
 (see `CC_DEBUG_DEFINES`) to see which subsystems have component-specific
@@ -538,7 +538,7 @@ appointment for help, I will do my best to accommodate you.
 - Complete implementation of the bytecode interpreter
 - Adding proper access/permission checking in class loading
 - Adding support for reflection
-- Adding support for actually native libraries (currently, only a few native functions are supported, and are special-cased. You can see how this works in `src/native.c`)
+- Adding support for actually native libraries (currently, only a few native functions are supported, and are special-cased. You can see how this works in `jvm/native.c`)
 - Add a JIT compiler (e.g., a profiling or tracing JIT)
 - Add support for multiple threads and concurrent execution (and possibly parallel execution using pthreads)
 - Add more system support, e.g., for file I/O and networking
