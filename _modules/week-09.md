@@ -9,3 +9,4 @@ Day 15 (3/5)
 Day 16 (3/7)
 : [Shadow and Nested Paging](#)
   : [**AMD Doc**{: .label .label-purple}](https://www.amd.com/en/search/documentation/hub.html#sortCriteria=%40amd_release_date%20descending&f-amd_archive_status=Active&f-amd_audience=Technical)
+: **Project 2 Due Friday**{: .label .label-red }
