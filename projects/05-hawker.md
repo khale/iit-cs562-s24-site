@@ -212,7 +212,7 @@ commands provided by BusyBox (the test image is a BusyBox image).
 
 There's another special command in the container image called `hog`. All it is
 going to do is use as much CPU as possible. Open up another terminal and run
-`top`` or `htop` in it. Then in your original terminal, run:
+`top` or `htop` in it. Then in your original terminal, run:
 
 ```bash
 sudo ./hawker test /hog
@@ -301,7 +301,7 @@ If you have time and want to extend your implementation, I'm willing to give you
 ## Further Reading
 - How [Facebook uses containers](https://lwn.net/Articles/764761/)
 - Container orchestration with [Kubernetes](https://kubernetes.io/)
-- [Performance of VMs vs Containers](http://cnp.neclab.eu/projects/lightvm/lightvm.pdf)
+- [Performance of VMs vs. Containers](https://dl.acm.org/doi/10.1145/3132747.3132763)
 
 
 
